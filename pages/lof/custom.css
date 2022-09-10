@@ -1,0 +1,13 @@
+.hero {
+    background-image: url('projet/banner.jpg');
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 33rem;
+  }
+
+  .beforeFooter {
+    background-image: url('projet/footer.jpg');
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 3rem;
+  }

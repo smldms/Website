@@ -17,10 +17,26 @@ height: auto;
     .masonry {
         column-count: 3;
     }
+    .masonry2 {
+        column-count: 2;
+    }
 }
 
 @media (max-width:750px) {
     .masonry {
         column-count: 2;
     }
+    .masonry2 {
+        column-count: 1;
+    }
+}
+
+
+.masonry2 {
+    column-count:2;
+    margin : 4em 1.25em;
+}
+
+.masonry2 .item {
+    margin-bottom: 1em;;
 }

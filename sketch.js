@@ -66,13 +66,13 @@ function draw() {
     }
     beginShape();
     // first controlpoint
-    curveVertex(x[formResolution - 1] + centerX, y[formResolution - 1] + centerY);
+    vertex(x[formResolution - 1] + centerX, y[formResolution - 1] + centerY);
     for (let i = 0; i < formResolution; i++) {
-        curveVertex(x[i] + centerX, y[i] + centerY);
+        vertex(x[i] + centerX, y[i] + centerY);
     }
-    curveVertex(x[0] + centerX, y[0] + centerY);
+    vertex(x[0] + centerX, y[0] + centerY);
     // end controlpoint
-    curveVertex(x[1] + centerX, y[1] + centerY);
+    vertex(x[1] + centerX, y[1] + centerY);
     endShape();
 
     offX += 0.0025;
