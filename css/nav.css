@@ -1,0 +1,126 @@
+.site-nav {
+    top: 3%;
+    right: 0;
+    position: absolute;
+    background: #ffffff;
+    z-index: 100;
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 500ms;
+}
+
+.site-nav-open {
+    clip-path: circle(150% at top right);
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav li {
+    border-bottom: 1px solid #313131;
+}
+
+.site-nav li:last-child {
+    border-bottom: none;
+}
+
+.site-nav a {
+    color: #000000;
+    display: block;
+    padding: 1em 5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    background: #f1f1f1;
+    color: #0a0a0a;
+}
+
+.site-nav--icon {
+    display: none;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: rgba(206, 7, 7, 0.4);
+}
+
+.menu-toggle {
+
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+
+}
+
+.menu-open .hamburger {
+    transform: rotate(45deg);
+}
+
+.menu-open .hamburger::before {
+    opacity: 0;
+}
+
+.menu-open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: #000000;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+@media (min-width:2950px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-nav {
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        margin-right: 10px;
+        clip-path: initial;
+    }
+
+    .site-nav li {
+        display: inline-block;
+        border: none;
+    }
+
+    .site-nav a {
+        padding: 0;
+        margin-left: 3em;
+    }
+
+    .site-nav--icon {
+        display: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+        background: rgb(255, 255, 255);
+    }
+
+}

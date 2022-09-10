@@ -1,0 +1,26 @@
+img {
+max-width: 100%;
+vertical-align: middle;
+height: auto;
+}
+
+.masonry {
+    column-count:4;
+    margin : 4em 1.25em;
+}
+
+.masonry .item {
+    margin-bottom: 1em;;
+}
+
+@media (max-width:1280px) {
+    .masonry {
+        column-count: 3;
+    }
+}
+
+@media (max-width:750px) {
+    .masonry {
+        column-count: 2;
+    }
+}
