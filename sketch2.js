@@ -2,18 +2,23 @@ let xoff = 0.01
 let yoff = 0.02
 let noiseY, noiseX;
 let zoneMax, zoneMin;
-let sclXVal; let fac;
+let sclXVal;
+let fac;
+let graph; let word;
 
 function setup() {
-
     cnv = createCanvas(windowWidth, windowHeight);
     cnv.position(0, 0)
     cnv.style('z-index', '-99')
+    graph = createGraphics(width / 2, height / 2 * 0.618)
     rectMode(CENTER)
-    zoneMax = height*0.15
-    zoneMin = height*0.90
-    sclXVal = random(10,100)
-    fac = random(0.05,0.25)
+    imageMode(CENTER)
+    zoneMax = height * 0.15
+    zoneMin = height
+    // sclXVal = 10
+    sclXVal = random(10, 100)
+    fac = random(0.05, 0.25)
+    word = random(["NFT","ART"]);
 }
 
 function draw() {
@@ -21,6 +26,16 @@ function draw() {
     noiseY = map(noise(yoff), 0, 1, -10, 10)
     noiseX = map(noise(xoff), 0, 1, -5, 5)
     noiser()
+
+    // graph.noStroke()
+    // graph.fill(0)
+    // graph.triangle(graph.width*.25, 0, graph.width*0.75, 0, graph.width / 2, graph.height*0.5)
+    // graph.textSize(graph.height/5)
+    // graph.textAlign(CENTER,CENTER)
+    // graph.fill(255)
+    // // graph.text(word, graph.width/2, graph.height*0.25)
+    // image(graph, width / 2, height / 2)
+
     xoff += 0.00085
     yoff += 0.00025
 }

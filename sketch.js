@@ -44,7 +44,7 @@ function draw() {
     drawingContext.shadowOffsetX = 0;
     drawingContext.shadowOffsetY = -3;
     drawingContext.shadowBlur = distortionFactor;
-    drawingContext.shadowColor = color(0,150);
+    drawingContext.shadowColor = color(0, 150);
     // speed
     // centerX += (mouseX - centerX) * 0.025;
     // centerY += (mouseY - centerY) * 0.025;
@@ -60,19 +60,19 @@ function draw() {
     }
 
     if (filled) {
-        fill(map(noise(offY), 0,1,255,255));
+        fill(map(noise(offY), 0, 1, 255, 255));
     } else {
         noFill();
     }
     beginShape();
     // first controlpoint
-    vertex(x[formResolution - 1] + centerX, y[formResolution - 1] + centerY);
+    curveVertex(x[formResolution - 1] + centerX, y[formResolution - 1] + centerY);
     for (let i = 0; i < formResolution; i++) {
-        vertex(x[i] + centerX, y[i] + centerY);
+        curveVertex(x[i] + centerX, y[i] + centerY);
     }
-    vertex(x[0] + centerX, y[0] + centerY);
+    curveVertex(x[0] + centerX, y[0] + centerY);
     // end controlpoint
-    vertex(x[1] + centerX, y[1] + centerY);
+    curveVertex(x[1] + centerX, y[1] + centerY);
     endShape();
 
     offX += 0.0025;
@@ -83,8 +83,8 @@ function draw() {
 function mousePressed() {
     clear();
     background(255);
-  }
+}
 
-  function windowResized() {
+function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-  }
+}
