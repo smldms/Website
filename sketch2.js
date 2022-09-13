@@ -16,9 +16,9 @@ function setup() {
     zoneMax = height * 0.15
     zoneMin = height
     // sclXVal = 10
-    sclXVal = random(10, 100)
+    sclXVal = random(10, 50)
     fac = random(0.05, 0.25)
-    word = random(["NFT","ART"]);
+    word = random(["NFT", "ART"]);
 }
 
 function draw() {
@@ -71,15 +71,16 @@ function terrain(maxH, minH, relief, clr1, clr2, dens, factor, sclX, sclY) {
             let off = y + map(n, 0, 1, -ampli, ampli)
             row.push(createVector(x, off));
         }
-        stroke(255)
         row.push(createVector(width, height));
         row.push(createVector(0, height));
         let lvl = map(y, maxH, height, 0, 1.5);
         let c = lerpColor(color(clr1), color(clr2), lvl);
-        // noFill()
-        fill(c)
+        noFill()
+        stroke(c)
+        // fill(c)
         beginShape();
         for (let v of row) {
+
             vertex(v.x, v.y);
         }
         endShape(CLOSE);
