@@ -1,0 +1,26 @@
+.hero {
+  background-image: url('img/1920x1280.jpg');
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 70rem;
+}
+
+.beforeFooter {
+    background-image: url('img/Banner.png');
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 3rem;
+  }
+
+.myDate h5 {
+  font-size: 1.25rem;
+}
+
+.soldOut {
+  font-size: 0.95rem;
+  font-weight: bold;
+  font-style: italic;
+  background-color: rgb(231, 231, 231);
+}
+
+.legend{color: white; background-color: black; padding-bottom: 5%; padding-top: 2.5%}

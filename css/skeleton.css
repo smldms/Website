@@ -419,3 +419,9 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
+.quote {
+  font-size: 7.5rem;
+  line-height: 3.33rem;
+}
