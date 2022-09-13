@@ -403,9 +403,7 @@ there.
 
 /* Larger than mobile */
 @media (min-width: 450px) {
-  .masonry {
-    column-count:2;
-}
+
 }
 
 /* Larger than phablet (also point when grid becomes active) */
@@ -422,6 +420,6 @@ there.
 
 
 .quote {
-  font-size: 7.5rem;
-  line-height: 3.33rem;
+  font-size: 6.18rem;
+  line-height: 5rem;
 }
