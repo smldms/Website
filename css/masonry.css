@@ -20,6 +20,9 @@ height: auto;
     .masonry2 {
         column-count: 2;
     }
+    .masonry3 {
+        column-count: 1;
+    }
 }
 
 @media (max-width:750px) {
@@ -27,6 +30,9 @@ height: auto;
         column-count: 2;
     }
     .masonry2 {
+        column-count: 1;
+    }
+    .masonry3 {
         column-count: 1;
     }
 }
@@ -38,5 +44,14 @@ height: auto;
 }
 
 .masonry2 .item {
+    margin-bottom: 1em;;
+}
+
+.masonry3 {
+    column-count:1;
+    margin : 4em 1.25em;
+}
+
+.masonry3 .item {
     margin-bottom: 1em;;
 }
