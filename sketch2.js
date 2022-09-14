@@ -90,6 +90,7 @@ function terrain(maxH, minH, relief, clr1, clr2, dens, factor, sclX, sclY) {
 function mousePressed() {
     clear();
     background(255);
+    setup()
 }
 
 function windowResized() {
