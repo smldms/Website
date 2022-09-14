@@ -650,8 +650,8 @@ li {
 
 .projects a {
   font-size: 1.2rem;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: left;
   text-decoration: none;
   background-color: #FFF;
@@ -667,4 +667,11 @@ li {
 
 .infos {
   font-size:0.9rem;
+}
+
+footer a {
+  font-size:1.0rem;
+}
+footer p {
+  font-size:1.0rem;
 }
