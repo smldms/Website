@@ -664,3 +664,7 @@ li {
   background-color: #000;
   color: rgb(255, 255, 255)
 }
+
+.infos {
+  font-size:0.9rem;
+}
