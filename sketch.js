@@ -1,7 +1,7 @@
 let cnv;
 let formResolution = 3;
-let stepSize = 3;
-let distortionFactor = 5;
+let stepSize = 5;
+let distortionFactor = 10;
 let initRadius = 0;
 let centerX;
 let centerY;
@@ -12,7 +12,6 @@ let yY;
 let offX = Math.random()
 let offY = Math.random()
 let distOff = Math.random()
-let globalSize = 800;
 let filled = true;
 let freeze = false;
 
@@ -60,7 +59,7 @@ function draw() {
     }
 
     if (filled) {
-        fill(map(noise(offY), 0, 1, 255, 255));
+        fill(map(noise(offY), 0, 1, 150, 255));
     } else {
         noFill();
     }
@@ -76,8 +75,8 @@ function draw() {
     endShape();
 
     offX += 0.0025;
-    offY += 0.00125;
-    distOff += 0.08005;
+    offY += 0.0025;
+    distOff += 0.05;
 }
 
 function mousePressed() {
